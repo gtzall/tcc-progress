@@ -119,14 +119,7 @@ export const format = {
       return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
     },
     
-    slugify: (text: string): string => {
-      return text
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)+/g, '')
-    },
+
     
     initials: (name: string): string => {
       return name
@@ -320,14 +313,7 @@ export const string = {
     return result
   },
   
-  slug: (text: string): string => {
-    return text
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/(^-|-$)+/g, '')
-  },
+
   
   camelCase: (text: string): string => {
     return text
@@ -631,11 +617,6 @@ export default {
   math,
   storage,
   debounce,
-  throttle,
-  url,
-  performance,
-  accessibility,
-  error,
-  cache,
-  test
+  throttle
 }
+

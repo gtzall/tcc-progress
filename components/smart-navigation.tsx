@@ -21,7 +21,7 @@ import { useTheme } from '@/contexts/theme-context'
 import { useAchievements } from '@/contexts/achievements-context'
 import { NAVIGATION_ITEMS, APP_CONFIG } from '@/lib/config'
 import { cn, format } from '@/lib/utils'
-import { ThemeSelector } from './theme-selector'
+import { EnhancedThemeSelector } from './enhanced-theme-selector'
 
 export function SmartNavigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -124,6 +124,24 @@ export function SmartNavigation() {
                 <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
+            
+            {/* Ranking Link */}
+            <Link
+              href="/ranking"
+              className="group relative flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
+            >
+              <span className="text-sm font-medium">🏆 Ranking</span>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:w-full transition-all duration-300" />
+            </Link>
+            
+            {/* Battle Link */}
+            <Link
+              href="/battle"
+              className="group relative flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
+            >
+              <span className="text-sm font-medium">⚔️ Batalhas</span>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-500 to-pink-500 group-hover:w-full transition-all duration-300" />
+            </Link>
           </div>
 
           {/* Right Side */}
@@ -142,8 +160,8 @@ export function SmartNavigation() {
               </div>
             </form>
 
-            {/* Theme Selector */}
-            <ThemeSelector />
+            {/* Enhanced Theme Selector */}
+            <EnhancedThemeSelector />
 
             {/* Theme Toggle */}
             <Button
@@ -301,6 +319,22 @@ export function SmartNavigation() {
                     )}
                   </Link>
                 ))}
+                
+                {/* Ranking Link Mobile */}
+                <Link
+                  href="/ranking"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200"
+                >
+                  🏆 Ranking
+                </Link>
+                
+                {/* Battle Link Mobile */}
+                <Link
+                  href="/battle"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200"
+                >
+                  ⚔️ Batalhas
+                </Link>
               </div>
 
               {/* Mobile Search */}
