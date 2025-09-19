@@ -39,9 +39,11 @@ function findQuestionById(questionsData: any, id: string) {
   return null
 }
 
+interface Params { id: string }
+
 export async function PUT(
   request: Request,
-  { params }: { params: { id: string } } as any
+  { params }: { params: Params }
 ) {
   try {
     const updatedQuestion = await request.json()
@@ -97,7 +99,7 @@ export async function PUT(
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } } as any
+  { params }: { params: Params }
 ) {
   try {
     const questionsData = await readQuestionsFile()
