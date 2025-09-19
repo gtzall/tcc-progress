@@ -65,13 +65,11 @@ export function SmartNavigation() {
   const getNotificationIcon = (type: string) => {
     switch (type) {
       case 'achievement':
-        return '🏆'
+        return 'Conquista'
       case 'quiz':
-        return '🧠'
-      case 'level':
-        return '⭐'
+        return 'Quiz'
       default:
-        return '📢'
+        return 'Info'
     }
   }
 
@@ -130,7 +128,7 @@ export function SmartNavigation() {
               href="/ranking"
               className="group relative flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
             >
-              <span className="text-sm font-medium">🏆 Ranking</span>
+              <span className="text-sm font-medium">Ranking</span>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:w-full transition-all duration-300" />
             </Link>
             
@@ -139,7 +137,7 @@ export function SmartNavigation() {
               href="/battle"
               className="group relative flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
             >
-              <span className="text-sm font-medium">⚔️ Batalhas</span>
+              <span className="text-sm font-medium">Batalhas</span>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-500 to-pink-500 group-hover:w-full transition-all duration-300" />
             </Link>
           </div>
@@ -159,9 +157,6 @@ export function SmartNavigation() {
                 />
               </div>
             </form>
-
-            {/* Enhanced Theme Selector */}
-            <EnhancedThemeSelector />
 
             {/* Theme Toggle */}
             <Button
@@ -325,7 +320,7 @@ export function SmartNavigation() {
                   href="/ranking"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200"
                 >
-                  🏆 Ranking
+                  Ranking
                 </Link>
                 
                 {/* Battle Link Mobile */}
@@ -333,7 +328,7 @@ export function SmartNavigation() {
                   href="/battle"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200"
                 >
-                  ⚔️ Batalhas
+                  Batalhas
                 </Link>
               </div>
 

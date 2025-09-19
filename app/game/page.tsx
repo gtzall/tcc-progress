@@ -1,12 +1,14 @@
-"use client"
+'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { QuizSetup } from '@/components/quiz-setup'
 import { QuizGame } from '@/components/quiz-game'
 import { QuizResults } from '@/components/quiz-results'
+import { QuickActivities } from '@/components/quick-activities'
 import { Button } from '@/components/ui/button'
-import { Play, Trophy, Target, Clock } from 'lucide-react'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Play, Trophy, Target, Clock, Zap, Settings } from 'lucide-react'
 
 type GameState = 'setup' | 'playing' | 'results'
 
@@ -84,44 +86,42 @@ export default function GamePage() {
                 </motion.div>
 
                 <h1 className="text-4xl font-bold text-white mb-4">
-                  🎯 QuizMaster
+                  QuizMaster
                 </h1>
                 <p className="text-xl text-gray-300 mb-8">
-                  Escolha sua matéria, dificuldade e instituição para começar!
+                  Escolha como você quer jogar!
                 </p>
-
-                {/* Quick Stats */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-                  <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600/30 text-center">
-                    <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center">
-                      <Trophy className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-white">9+</div>
-                    <div className="text-gray-400 text-sm">Matérias</div>
-                  </div>
-
-                  <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600/30 text-center">
-                    <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                      <Target className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-white">4</div>
-                    <div className="text-gray-400 text-sm">Dificuldades</div>
-                  </div>
-
-                  <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600/30 text-center">
-                    <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-white">8+</div>
-                    <div className="text-gray-400 text-sm">Instituições</div>
-                  </div>
-                </div>
               </div>
             </div>
 
-            {/* Quiz Setup */}
-            <div className="max-w-4xl mx-auto p-6">
-              <QuizSetup onStart={handleStartQuiz} onClose={() => {}} />
+            {/* Main Content */}
+            <div className="max-w-6xl mx-auto p-6">
+              <Tabs defaultValue="quick" className="space-y-6">
+                <TabsList className="grid w-full grid-cols-2 bg-gray-800/50 border border-gray-700/50">
+                  <TabsTrigger 
+                    value="quick" 
+                    className="flex items-center gap-2 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                  >
+                    <Zap className="w-4 h-4" />
+                    Atividades Rápidas
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="custom" 
+                    className="flex items-center gap-2 data-[state=active]:bg-purple-600 data-[state=active]:text-white"
+                  >
+                    <Settings className="w-4 h-4" />
+                    Configurar Quiz
+                  </TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="quick" className="space-y-6">
+                  <QuickActivities onActivitySelect={handleStartQuiz} />
+                </TabsContent>
+
+                <TabsContent value="custom" className="space-y-6">
+                  <QuizSetup onStart={handleStartQuiz} onClose={() => {}} />
+                </TabsContent>
+              </Tabs>
             </div>
           </motion.div>
         )}

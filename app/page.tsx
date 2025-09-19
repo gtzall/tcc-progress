@@ -150,9 +150,7 @@ export default function HomePage() {
       <EnhancedThemeAnimations theme={currentTheme} />
       
       {/* Header with Smart Navigation */}
-      <header className="relative z-20 bg-white/5 backdrop-blur-md border-b border-white/10 shadow-lg">
-        <SmartNavigation />
-      </header>
+
 
       {/* Main Content */}
       <main className="relative z-10">

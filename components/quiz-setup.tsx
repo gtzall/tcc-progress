@@ -17,6 +17,8 @@ import {
   Star
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
 
 // Tipos de dados
@@ -52,17 +54,35 @@ interface QuizConfig {
   institution: string
   questionCount: number
   timeLimit: number
+  area?: string
+  tema?: string
+}
+
+interface Question {
+  enunciado: string
+  alternativas: string[]
+  respostaCorreta: number
+  tema: string
+  explicacao: string
 }
 
 // Dados das matérias
 const subjects: Subject[] = [
+  {
+    id: 'geral',
+    name: 'Conhecimentos Gerais',
+    icon: <Brain className="w-5 h-5" />,
+    color: 'from-blue-500 to-cyan-500',
+    description: 'Questões diversas sobre educação',
+    questionCount: 30
+  },
   {
     id: 'matematica',
     name: 'Matemática',
     icon: <Brain className="w-5 h-5" />,
     color: 'from-blue-500 to-cyan-500',
     description: 'Álgebra, geometria e cálculo',
-    questionCount: 1250
+    questionCount: 0
   },
   {
     id: 'portugues',
@@ -70,7 +90,7 @@ const subjects: Subject[] = [
     icon: <BookOpen className="w-5 h-5" />,
     color: 'from-green-500 to-emerald-500',
     description: 'Gramática e literatura',
-    questionCount: 980
+    questionCount: 0
   },
   {
     id: 'historia',
@@ -78,7 +98,7 @@ const subjects: Subject[] = [
     icon: <GraduationCap className="w-5 h-5" />,
     color: 'from-amber-500 to-orange-500',
     description: 'História geral e do Brasil',
-    questionCount: 750
+    questionCount: 0
   },
   {
     id: 'geografia',
@@ -86,7 +106,7 @@ const subjects: Subject[] = [
     icon: <Target className="w-5 h-5" />,
     color: 'from-teal-500 to-cyan-500',
     description: 'Geografia física e humana',
-    questionCount: 680
+    questionCount: 0
   },
   {
     id: 'biologia',
@@ -94,42 +114,9 @@ const subjects: Subject[] = [
     icon: <Zap className="w-5 h-5" />,
     color: 'from-emerald-500 to-green-500',
     description: 'Vida e ecologia',
-    questionCount: 920
-  },
-  {
-    id: 'fisica',
-    name: 'Física',
-    icon: <Star className="w-5 h-5" />,
-    color: 'from-purple-500 to-pink-500',
-    description: 'Mecânica e termodinâmica',
-    questionCount: 850
-  },
-  {
-    id: 'quimica',
-    name: 'Química',
-    icon: <Zap className="w-5 h-5" />,
-    color: 'from-red-500 to-pink-500',
-    description: 'Química orgânica e inorgânica',
-    questionCount: 720
-  },
-  {
-    id: 'filosofia',
-    name: 'Filosofia',
-    icon: <Brain className="w-5 h-5" />,
-    color: 'from-indigo-500 to-purple-500',
-    description: 'Pensamento filosófico',
-    questionCount: 450
-  },
-  {
-    id: 'sociologia',
-    name: 'Sociologia',
-    icon: <GraduationCap className="w-5 h-5" />,
-    color: 'from-slate-500 to-gray-500',
-    description: 'Sociedade e cultura',
-    questionCount: 380
+    questionCount: 0
   }
 ]
-
 // Dados das dificuldades
 const difficulties: Difficulty[] = [
   {
@@ -152,81 +139,40 @@ const difficulties: Difficulty[] = [
     color: 'from-red-500 to-pink-500',
     description: 'Conceitos avançados',
     multiplier: 2.0
-  },
-  {
-    id: 'expert',
-    name: 'Expert',
-    color: 'from-purple-500 to-indigo-500',
-    description: 'Nível universitário',
-    multiplier: 3.0
   }
+]
+
+// Áreas disponíveis
+const AREAS = [
+  'Todas',
+  'Provas',
+  'Cursos', 
+  'Programas',
+  'Escola',
+  'Universidades',
+  'Estatísticas'
+]
+
+// Temas disponíveis
+const TEMAS = [
+  'Todos',
+  'Provas',
+  'Cursos',
+  'Programas',
+  'Escola',
+  'Universidades',
+  'Estatísticas'
 ]
 
 // Dados das instituições
 const institutions: Institution[] = [
   {
-    id: 'enem',
-    name: 'ENEM',
+    id: 'geral',
+    name: 'Conhecimentos Gerais',
     type: 'enem',
     location: 'Nacional',
-    questionCount: 2500,
-    subjects: ['matematica', 'portugues', 'historia', 'geografia', 'biologia', 'fisica', 'quimica', 'filosofia', 'sociologia']
-  },
-  {
-    id: 'fuvest',
-    name: 'FUVEST',
-    type: 'federal',
-    location: 'São Paulo',
-    questionCount: 1800,
-    subjects: ['matematica', 'portugues', 'historia', 'geografia', 'biologia', 'fisica', 'quimica']
-  },
-  {
-    id: 'unicamp',
-    name: 'UNICAMP',
-    type: 'estadual',
-    location: 'São Paulo',
-    questionCount: 1600,
-    subjects: ['matematica', 'portugues', 'historia', 'geografia', 'biologia', 'fisica', 'quimica']
-  },
-  {
-    id: 'ita',
-    name: 'ITA',
-    type: 'federal',
-    location: 'São Paulo',
-    questionCount: 1200,
-    subjects: ['matematica', 'fisica', 'quimica', 'portugues', 'ingles']
-  },
-  {
-    id: 'ime',
-    name: 'IME',
-    type: 'federal',
-    location: 'Rio de Janeiro',
-    questionCount: 1100,
-    subjects: ['matematica', 'fisica', 'quimica', 'portugues', 'ingles']
-  },
-  {
-    id: 'unb',
-    name: 'UNB',
-    type: 'federal',
-    location: 'Distrito Federal',
-    questionCount: 1400,
-    subjects: ['matematica', 'portugues', 'historia', 'geografia', 'biologia', 'fisica', 'quimica']
-  },
-  {
-    id: 'ufmg',
-    name: 'UFMG',
-    type: 'federal',
-    location: 'Minas Gerais',
-    questionCount: 1300,
-    subjects: ['matematica', 'portugues', 'historia', 'geografia', 'biologia', 'fisica', 'quimica']
-  },
-  {
-    id: 'ufrj',
-    name: 'UFRJ',
-    type: 'federal',
-    location: 'Rio de Janeiro',
-    questionCount: 1200,
-    subjects: ['matematica', 'portugues', 'historia', 'geografia', 'biologia', 'fisica', 'quimica']
+    questionCount: 30,
+    subjects: ['geral']
   }
 ]
 
@@ -241,17 +187,69 @@ export function QuizSetup({ onStart, onClose }: QuizSetupProps) {
     difficulty: '',
     institution: '',
     questionCount: 10,
-    timeLimit: 300
+    timeLimit: 300,
+    area: 'Todas',
+    tema: 'Todos'
   })
 
   const [activeTab, setActiveTab] = useState<'subject' | 'difficulty' | 'institution' | 'settings'>('subject')
   const [showFilters, setShowFilters] = useState(false)
+  const [availableQuestions, setAvailableQuestions] = useState<Question[]>([])
+  const [filteredQuestions, setFilteredQuestions] = useState<Question[]>([])
+
+  useEffect(() => {
+    loadQuestions()
+  }, [])
+
+  useEffect(() => {
+    filterQuestions()
+  }, [config.area, config.tema, config.difficulty, availableQuestions])
+
+  const loadQuestions = async () => {
+    try {
+      const response = await fetch('/api/questions')
+      const data = await response.json()
+      
+      // Converter estrutura do JSON para array
+      const allQuestions: Question[] = []
+      Object.entries(data).forEach(([dificuldade, questoes]) => {
+        (questoes as any[]).forEach((questao) => {
+          allQuestions.push({
+            ...questao,
+            dificuldade: dificuldade as 'facil' | 'medio' | 'dificil'
+          })
+        })
+      })
+      
+      setAvailableQuestions(allQuestions)
+    } catch (error) {
+      console.error('Erro ao carregar questões:', error)
+    }
+  }
+
+  const filterQuestions = () => {
+    let filtered = availableQuestions
+
+    if (config.difficulty && config.difficulty !== 'todas') {
+      filtered = filtered.filter(q => (q as any).dificuldade === config.difficulty)
+    }
+
+    if (config.area && config.area !== 'Todas') {
+      filtered = filtered.filter(q => (q as any).area === config.area)
+    }
+
+    if (config.tema && config.tema !== 'Todos') {
+      filtered = filtered.filter(q => q.tema === config.tema)
+    }
+
+    setFilteredQuestions(filtered)
+  }
 
   const handleConfigChange = (key: keyof QuizConfig, value: string | number) => {
     setConfig(prev => ({ ...prev, [key]: value }))
   }
 
-  const canStart = config.subject && config.difficulty && config.institution
+  const canStart = config.subject && config.difficulty && config.institution && filteredQuestions.length > 0
 
   const getFilteredInstitutions = () => {
     if (!config.subject) return institutions
@@ -500,35 +498,86 @@ export function QuizSetup({ onStart, onClose }: QuizSetupProps) {
             )}
 
             {activeTab === 'settings' && (
-                  <motion.div
+              <motion.div
                 key="settings"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-6"
               >
+                {/* Filtros por Área e Tema */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white">Filtros de Questões</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label className="text-white font-medium">Área</label>
+                      <Select value={config.area} onValueChange={(value) => handleConfigChange('area', value)}>
+                        <SelectTrigger className="bg-gray-700 border-gray-600 text-white">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent className="bg-gray-700 border-gray-600">
+                          {AREAS.map(area => (
+                            <SelectItem key={area} value={area} className="text-white">
+                              {area}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                      <label className="text-white font-medium">Tema</label>
+                      <Select value={config.tema} onValueChange={(value) => handleConfigChange('tema', value)}>
+                        <SelectTrigger className="bg-gray-700 border-gray-600 text-white">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent className="bg-gray-700 border-gray-600">
+                          {TEMAS.map(tema => (
+                            <SelectItem key={tema} value={tema} className="text-white">
+                              {tema}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-600/50">
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-300">Questões disponíveis:</span>
+                      <Badge className="bg-blue-600 text-white">
+                        {filteredQuestions.length} questões
+                      </Badge>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Número de questões */}
                   <div className="space-y-3">
                     <label className="text-white font-medium">Número de Questões</label>
-                        <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-2 gap-2">
                       {[5, 10, 15, 20].map((count) => (
                         <button
                           key={count}
-                          onClick={() => handleConfigChange('questionCount', count)}
+                          onClick={() => handleConfigChange('questionCount', Math.min(count, filteredQuestions.length))}
+                          disabled={count > filteredQuestions.length}
                           className={cn(
                             'px-4 py-3 rounded-lg border-2 transition-all duration-200',
                             'hover:scale-105 hover:shadow-lg',
-                            config.questionCount === count
+                            count > filteredQuestions.length
+                              ? 'border-gray-700 bg-gray-800/30 text-gray-500 cursor-not-allowed'
+                              : config.questionCount === count
                               ? 'border-blue-500 bg-blue-500/10 text-blue-400'
                               : 'border-gray-600 bg-gray-800/50 text-gray-300 hover:border-gray-500'
                           )}
                         >
                           {count}
                         </button>
-                          ))}
-                        </div>
-                      </div>
+                      ))}
+                    </div>
+                  </div>
 
                   {/* Tempo limite */}
                   <div className="space-y-3">
@@ -553,12 +602,12 @@ export function QuizSetup({ onStart, onClose }: QuizSetupProps) {
                         >
                           {time.label}
                         </button>
-                            ))}
-                          </div>
-                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                  </motion.div>
-                )}
+              </motion.div>
+            )}
               </AnimatePresence>
                   </div>
 

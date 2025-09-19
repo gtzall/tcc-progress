@@ -16,7 +16,8 @@ export const APP_CONFIG = {
     stats: "/stats",
     login: "/login",
     register: "/register",
-    dashboard: "/dashboard"
+    dashboard: "/dashboard",
+    admin: "/admin"
   },
   
   // Configurações de tema
@@ -188,6 +189,13 @@ export const NAVIGATION_ITEMS = [
     icon: "BarChart3",
     description: "Análise detalhada do progresso",
     badge: undefined
+  },
+  {
+    label: "Admin",
+    href: "/admin",
+    icon: "Settings",
+    description: "Administração de questões",
+    badge: "Admin"
   }
 ] as const
 
