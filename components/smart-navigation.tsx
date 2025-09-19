@@ -354,3 +354,5 @@ export function SmartNavigation() {
     </nav>
   )
 }
+
+export default SmartNavigation

@@ -38,7 +38,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/contexts/theme-context"
 import { useAchievements } from "@/contexts/achievements-context"
-import SmartNavigation from "@/components/smart-navigation"
+import { SmartNavigation } from "@/components/smart-navigation"
 import EnhancedThemeAnimations from "@/components/enhanced-theme-animations"
 
 const categories = [
@@ -127,11 +127,6 @@ export default function AchievementsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden relative">
       <EnhancedThemeAnimations theme={currentTheme} />
-      
-      {/* Header */}
-      <header className="relative z-20 bg-white/5 backdrop-blur-md border-b border-white/10 shadow-lg">
-        <SmartNavigation />
-      </header>
 
       <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
