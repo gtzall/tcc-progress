@@ -160,28 +160,14 @@ export const NAVIGATION_ITEMS = [
     href: "/game",
     icon: "Gamepad2",
     description: "Iniciar um novo quiz",
-    badge: "Novo"
+    badge: undefined
   },
   {
     label: "Modo Estudos",
     href: "/modo-estudos",
     icon: "Book",
     description: "Estude com configurações personalizadas",
-    badge: "Beta"
-  },
-  {
-    label: "Ranking",
-    href: "/ranking",
-    icon: "Award",
-    description: "Veja sua posição no ranking global",
     badge: undefined
-  },
-  {
-    label: "Batalhas",
-    href: "/battle",
-    icon: "Swords",
-    description: "Desafie amigos em batalhas de conhecimento",
-    badge: "Em Breve"
   },
   {
     label: "Perfil",
@@ -198,10 +184,10 @@ export const NAVIGATION_ITEMS = [
     badge: undefined
   },
   {
-    label: "Biblioteca",
-    href: "/library",
-    icon: "BookOpen",
-    description: "Materiais de estudo",
+    label: "Ranking",
+    href: "/ranking",
+    icon: "Award",
+    description: "Veja sua posição no ranking global",
     badge: undefined
   },
   {
@@ -209,6 +195,20 @@ export const NAVIGATION_ITEMS = [
     href: "/stats",
     icon: "BarChart3",
     description: "Análise detalhada do progresso",
+    badge: undefined
+  },
+  {
+    label: "Biblioteca",
+    href: "/library",
+    icon: "BookOpen",
+    description: "Materiais de estudo",
+    badge: undefined
+  },
+  {
+    label: "Batalhas",
+    href: "/battle",
+    icon: "Swords",
+    description: "Desafie amigos em batalhas de conhecimento",
     badge: undefined
   },
   {

@@ -223,23 +223,43 @@ export function BattleArena() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-red-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent mb-4">
-            Arena de Batalhas
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Entre na arena e prove que você é o mestre do conhecimento
-          </p>
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500 via-yellow-500 to-orange-500 flex items-center justify-center mr-4">
+              <Swords className="w-10 h-10 text-white" />
+            </div>
+            <div>
+              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                Arena de Batalhas
+              </h1>
+              <p className="text-xl text-gray-300 mt-2">
+                Entre na arena e prove que você é o mestre do conhecimento
+              </p>
+            </div>
+          </div>
           
           {/* Player Stats */}
           <div className="flex justify-center items-center gap-8 mb-8">
-            <div className="flex items-center gap-2">
+            <motion.div 
+              className="flex items-center gap-2 bg-gray-800/50 backdrop-blur-xl rounded-full px-4 py-2 border border-gray-700/50"
+              whileHover={{ scale: 1.05 }}
+            >
               <Star className="w-6 h-6 text-yellow-400" />
               <span className="text-lg font-semibold">Nível {playerLevel}</span>
-            </div>
-            <div className="flex items-center gap-2">
+            </motion.div>
+            <motion.div 
+              className="flex items-center gap-2 bg-gray-800/50 backdrop-blur-xl rounded-full px-4 py-2 border border-gray-700/50"
+              whileHover={{ scale: 1.05 }}
+            >
               <Sparkles className="w-6 h-6 text-purple-400" />
               <span className="text-lg font-semibold">{playerCoins} Moedas</span>
-            </div>
+            </motion.div>
+            <motion.div 
+              className="flex items-center gap-2 bg-gray-800/50 backdrop-blur-xl rounded-full px-4 py-2 border border-gray-700/50"
+              whileHover={{ scale: 1.05 }}
+            >
+              <Trophy className="w-6 h-6 text-cyan-400" />
+              <span className="text-lg font-semibold">Rank: Guerreiro</span>
+            </motion.div>
           </div>
         </motion.div>
 

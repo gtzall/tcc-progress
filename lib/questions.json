@@ -155,6 +155,30 @@
       "respostaCorreta": 0,
       "tema": "História",
       "explicacao": "Dom Pedro I proclamou a independência do Brasil em 7 de setembro de 1822."
+    },
+    {
+      "enunciado": "Qual a fórmula da água?",
+      "alternativas": [
+        "H2O",
+        "CO2",
+        "O2",
+        "N2"
+      ],
+      "respostaCorreta": 0,
+      "tema": "Química",
+      "explicacao": "A fórmula química da água é H2O, o que significa que ela é composta por dois átomos de hidrogênio e um de oxigênio."
+    },
+    {
+      "enunciado": "Qual o maior planeta do sistema solar?",
+      "alternativas": [
+        "Júpiter",
+        "Saturno",
+        "Terra",
+        "Marte"
+      ],
+      "respostaCorreta": 0,
+      "tema": "Astronomia",
+      "explicacao": "Júpiter é o maior planeta do sistema solar, com um diâmetro de cerca de 142.984 km."
     }
   ],
   "medio": [
@@ -313,6 +337,30 @@
       "respostaCorreta": 1,
       "tema": "História",
       "explicacao": "Marechal Deodoro da Fonseca foi o primeiro presidente do Brasil, assumindo o cargo após a Proclamação da República em 1889."
+    },
+    {
+      "enunciado": "Qual a capital da Austrália?",
+      "alternativas": [
+        "Sydney",
+        "Melbourne",
+        "Canberra",
+        "Perth"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Geografia",
+      "explicacao": "A capital da Austrália é Canberra, embora Sydney e Melbourne sejam mais conhecidas."
+    },
+    {
+      "enunciado": "Qual o livro mais vendido no mundo depois da Bíblia?",
+      "alternativas": [
+        "O Senhor dos Anéis",
+        "Dom Quixote",
+        "O Pequeno Príncipe",
+        "Harry Potter e a Pedra Filosofal"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Literatura",
+      "explicacao": "Dom Quixote, de Miguel de Cervantes, é considerado o livro mais vendido no mundo depois da Bíblia."
     }
   ],
   "dificil": [
@@ -459,8 +507,7 @@
       "respostaCorreta": 2,
       "tema": "Geologia",
       "explicacao": "A sedimentação é o processo de deposição de partículas que, ao longo do tempo, formam rochas sedimentares."
-    },
-    {
+    },    {
       "enunciado": "Qual o nome do tratado que encerrou a Primeira Guerra Mundial?",
       "alternativas": [
         "Tratado de Versalhes",
@@ -471,13 +518,128 @@
       "respostaCorreta": 0,
       "tema": "História",
       "explicacao": "O Tratado de Versalhes foi assinado em 1919 e formalmente encerrou a Primeira Guerra Mundial."
+    },
+    {
+      "enunciado": "Qual o nome do fenômeno físico que explica o porquê do céu ser azul?",
+      "alternativas": [
+        "Reflexão",
+        "Refração",
+        "Dispersão de Rayleigh",
+        "Difração"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Física",
+      "explicacao": "A dispersão de Rayleigh é a dispersão da luz por partículas muito menores que o comprimento de onda da luz, o que faz com que a luz azul seja mais espalhada, tornando o céu azul."
+    },
+    {
+      "enunciado": "Qual o nome do processo de divisão celular que resulta em células com metade do número de cromossomos?",
+      "alternativas": [
+        "Mitose",
+        "Meiose",
+        "Cariocinese",
+        "Citocinese"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Biologia",
+      "explicacao": "A meiose é um tipo de divisão celular que produz quatro células-filhas com metade do número de cromossomos da célula-mãe, essencial para a reprodução sexuada."
     }
   ],
   "muito_dificil": [
     {
-      "enunciado": "Qual o nome do tratado que, em 1494, dividiu o mundo a ser descoberto entre Portugal e Espanha, e qual a linha imaginária que o definia?",
+      "enunciado": "Qual o nome do tratado que, em 1494, dividiu o mundo a ser descoberto entre Portugal e Espanha, e qual a linha imaginária que o demarcava?",
       "alternativas": [
-        "Tratado de Tordesilhas, Meridiano de Tordesilhas",
+        "Tratado de Tordesilhas, 370 léguas a oeste de Cabo Verde",
+        "Tratado de Madri, linha do Equador",
+        "Tratado de Saragoça, 180 graus de longitude",
+        "Tratado de Ultrecht, meridiano de Greenwich"
+      ],
+      "respostaCorreta": 0,
+      "tema": "História",
+      "explicacao": "O Tratado de Tordesilhas, assinado em 1494, dividiu as terras descobertas e a descobrir entre Portugal e Espanha, estabelecendo uma linha imaginária a 370 léguas a oeste das ilhas de Cabo Verde."
+    },
+    {
+      "enunciado": "Qual o nome da teoria que postula que o universo está em constante expansão e que teve um início a partir de uma singularidade?",
+      "alternativas": [
+        "Teoria do Estado Estacionário",
+        "Teoria do Big Bang",
+        "Teoria das Cordas",
+        "Teoria da Relatividade Geral"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Física",
+      "explicacao": "A Teoria do Big Bang é o modelo cosmológico dominante que descreve o desenvolvimento inicial do universo a partir de uma singularidade, e sua constante expansão."
+    },
+    {
+      "enunciado": "Qual o nome do processo de formação de novas espécies a partir de uma espécie ancestral?",
+      "alternativas": [
+        "Mutação",
+        "Seleção Natural",
+        "Especiação",
+        "Adaptação"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Biologia",
+      "explicacao": "Especiação é o processo evolutivo pelo qual novas espécies biológicas surgem a partir de uma espécie ancestral, geralmente devido ao isolamento reprodutivo."
+    },
+    {
+      "enunciado": "Qual o nome do conceito filosófico que descreve a busca pelo prazer como o principal objetivo da vida?",
+      "alternativas": [
+        "Estoicismo",
+        "Epicurismo",
+        "Ceticismo",
+        "Niilismo"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Filosofia",
+      "explicacao": "O Epicurismo, fundado por Epicuro, defende que o prazer (ataraxia e aponia) é o bem supremo e o objetivo da vida, mas um prazer moderado e duradouro, não meramente sensorial."
+    },
+    {
+      "enunciado": "Qual o nome da corrente artística que surgiu na França no final do século XIX e buscava capturar a impressão de um momento?",
+      "alternativas": [
+        "Cubismo",
+        "Surrealismo",
+        "Impressionismo",
+        "Expressionismo"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Arte",
+      "explicacao": "O Impressionismo, com artistas como Monet e Renoir, buscava capturar a luz e a atmosfera de um momento, focando nas impressões visuais em vez de detalhes precisos."
+    }
+  ]
+} oeste de Cabo Verde",
+        "Tratado de Madri, linha do Equador",
+        "Tratado de Saragoça, 180 graus de longitude",
+        "Tratado de Ultrecht, meridiano de Greenwich"
+      ],
+      "respostaCorreta": 0,
+      "tema": "História",
+      "explicacao": "O Tratado de Tordesilhas, assinado em 1494, dividiu as terras descobertas e a descobrir entre Portugal e Espanha, estabelecendo uma linha imaginária a 370 léguas a oeste das ilhas de Cabo Verde."
+    },
+    {
+      "enunciado": "Qual o nome da teoria que postula que o universo está em constante expansão e que teve um início a partir de uma singularidade?",
+      "alternativas": [
+        "Teoria do Estado Estacionário",
+        "Teoria do Big Bang",
+        "Teoria das Cordas",
+        "Teoria da Relatividade Geral"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Física",
+      "explicacao": "A Teoria do Big Bang é o modelo cosmológico dominante que descreve o desenvolvimento inicial do universo a partir de uma singularidade, e sua constante expansão."
+    },
+    {
+      "enunciado": "Qual o nome do processo de formação de novas espécies a partir de uma espécie ancestral?",
+      "alternativas": [
+        "Mutação",
+        "Seleção Natural",
+        "Especiação",
+        "Adaptação"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Biologia",
+      "explicacao": "Especiação é o processo evolutivo pelo qual novas espécies biológicas surgem a partir de uma espécie ancestral, geralmente devido ao isolamento reprodutivo."
+    }
+  ]Tordesilhas",
         "Tratado de Madri, Linha do Equador",
         "Tratado de Utrecht, Trópico de Capricórnio",
         "Tratado de Badajoz, Meridiano de Greenwich"
@@ -620,4 +782,6 @@
     }
   ]
 }
+
+
 
