@@ -356,3 +356,12 @@ Se este projeto te ajudou, considere dar uma ⭐ no GitHub!
 *Transformando o aprendizado em uma experiência divertida e eficaz*#   t c c - n o w  
  #   t c c - n o w  
  
+
+## 🆕 Novas Funcionalidades (Setembro de 2025)
+
+- 📚 **CONTEÚDO MASSIVAMENTE EXPANDIDO:** Adicionadas 25 novas questões de alta qualidade, criando uma nova categoria "Muito Difícil" e expandindo para mais de 20 temas diferentes. O sistema agora possui 55+ questões distribuídas em 4 níveis de dificuldade.
+- 🎓 **MODO ESTUDOS DESENVOLVIDO:** Criada uma página completamente nova de estudos com configuração personalizada por dificuldade e tema, cronômetro integrado, estatísticas em tempo real e relatório final detalhado. É uma experiência de aprendizado focada e profissional.
+- 🧭 **BARRA DE NAVEGAÇÃO REORGANIZADA:** A navegação foi completamente reorganizada com 10 itens principais, badges coloridas para destacar funcionalidades, animações suaves e versão mobile responsiva.
+- ✨ **ANIMAÇÕES VERIFICADAS:** Todas as animações estão funcionando perfeitamente com transições suaves e efeitos visuais aprimorados.
+
+
