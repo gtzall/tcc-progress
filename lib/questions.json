@@ -2,7 +2,12 @@
   "facil": [
     {
       "enunciado": "Qual é a prova que dá acesso às universidades brasileiras?",
-      "alternativas": ["ENEM", "OAB", "ENCCEJA", "Vestibular"],
+      "alternativas": [
+        "ENEM",
+        "OAB",
+        "ENCCEJA",
+        "Vestibular"
+      ],
       "respostaCorreta": 0,
       "tema": "Provas",
       "explicacao": "O ENEM (Exame Nacional do Ensino Médio) é a principal porta de entrada para as universidades brasileiras, tanto públicas quanto privadas."
@@ -21,28 +26,48 @@
     },
     {
       "enunciado": "Qual é a nota máxima possível na redação do ENEM?",
-      "alternativas": ["900", "1000", "950", "800"],
+      "alternativas": [
+        "900",
+        "1000",
+        "950",
+        "800"
+      ],
       "respostaCorreta": 1,
       "tema": "Provas",
       "explicacao": "A redação do ENEM pode chegar a 1000 pontos, sendo avaliada em cinco competências diferentes."
     },
     {
       "enunciado": "Quantas áreas de conhecimento são avaliadas no ENEM?",
-      "alternativas": ["3", "4", "5", "6"],
+      "alternativas": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
       "respostaCorreta": 1,
       "tema": "Provas",
       "explicacao": "O ENEM avalia 4 áreas: Linguagens, Códigos e suas Tecnologias; Ciências Humanas e suas Tecnologias; Ciências da Natureza e suas Tecnologias; e Matemática e suas Tecnologias."
     },
     {
       "enunciado": "Qual destes NÃO é um curso superior?",
-      "alternativas": ["Bacharelado", "Licenciatura", "Técnico", "Tecnólogo"],
+      "alternativas": [
+        "Bacharelado",
+        "Licenciatura",
+        "Técnico",
+        "Tecnólogo"
+      ],
       "respostaCorreta": 2,
       "tema": "Cursos",
       "explicacao": "O curso técnico é de nível médio, enquanto bacharelado, licenciatura e tecnólogo são cursos superiores."
     },
     {
       "enunciado": "Qual é a duração mínima de um curso de bacharelado no Brasil?",
-      "alternativas": ["2 anos", "3 anos", "4 anos", "5 anos"],
+      "alternativas": [
+        "2 anos",
+        "3 anos",
+        "4 anos",
+        "5 anos"
+      ],
       "respostaCorreta": 2,
       "tema": "Cursos",
       "explicacao": "A maioria dos cursos de bacharelado no Brasil tem duração mínima de 4 anos, embora alguns como Medicina possam ter 6 anos."
@@ -61,65 +86,146 @@
     },
     {
       "enunciado": "Qual destes é um programa de bolsas em universidades particulares?",
-      "alternativas": ["FIES", "PROUNI", "SISU", "ENEM"],
+      "alternativas": [
+        "FIES",
+        "PROUNI",
+        "SISU",
+        "ENEM"
+      ],
       "respostaCorreta": 1,
       "tema": "Programas",
       "explicacao": "O PROUNI (Programa Universidade para Todos) oferece bolsas de estudo em instituições particulares de ensino superior."
     },
     {
       "enunciado": "Quantos dias dura a aplicação do ENEM?",
-      "alternativas": ["1", "2", "3", "4"],
+      "alternativas": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
       "respostaCorreta": 1,
       "tema": "Provas",
       "explicacao": "O ENEM é aplicado em dois domingos consecutivos, com diferentes áreas de conhecimento em cada dia."
     },
     {
       "enunciado": "Qual destes é um tipo de questão comum no ENEM?",
-      "alternativas": ["Dissertativa", "Múltipla escolha", "Verdadeiro ou falso", "Associação"],
+      "alternativas": [
+        "Dissertativa",
+        "Múltipla escolha",
+        "Verdadeiro ou falso",
+        "Associação"
+      ],
       "respostaCorreta": 1,
       "tema": "Provas",
       "explicacao": "O ENEM utiliza predominantemente questões de múltipla escolha, com exceção da redação que é dissertativa."
+    },
+    {
+      "enunciado": "Qual o nome do principal rio que corta a cidade de São Paulo?",
+      "alternativas": [
+        "Rio Tietê",
+        "Rio Pinheiros",
+        "Rio Grande",
+        "Rio Paraíba do Sul"
+      ],
+      "respostaCorreta": 0,
+      "tema": "Geografia",
+      "explicacao": "O Rio Tietê é o principal rio que corta a cidade de São Paulo, conhecido por sua poluição."
+    },
+    {
+      "enunciado": "Qual o maior bioma brasileiro?",
+      "alternativas": [
+        "Mata Atlântica",
+        "Cerrado",
+        "Amazônia",
+        "Caatinga"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Biologia",
+      "explicacao": "A Amazônia é o maior bioma brasileiro e a maior floresta tropical do mundo."
+    },
+    {
+      "enunciado": "Quem proclamou a independência do Brasil?",
+      "alternativas": [
+        "Dom Pedro I",
+        "Tiradentes",
+        "Princesa Isabel",
+        "José Bonifácio"
+      ],
+      "respostaCorreta": 0,
+      "tema": "História",
+      "explicacao": "Dom Pedro I proclamou a independência do Brasil em 7 de setembro de 1822."
     }
   ],
   "medio": [
     {
       "enunciado": "Quantos anos tem o Ensino Fundamental no Brasil?",
-      "alternativas": ["8 anos", "9 anos", "10 anos", "11 anos"],
+      "alternativas": [
+        "8 anos",
+        "9 anos",
+        "10 anos",
+        "11 anos"
+      ],
       "respostaCorreta": 1,
       "tema": "Escola",
       "explicacao": "Desde 2006, com a Lei nº 11.274, o Ensino Fundamental no Brasil passou a ter 9 anos de duração, iniciando aos 6 anos de idade."
     },
     {
       "enunciado": "Qual destes não é um curso da área de Humanas?",
-      "alternativas": ["Direito", "Psicologia", "Engenharia Civil", "História"],
+      "alternativas": [
+        "Direito",
+        "Psicologia",
+        "Engenharia Civil",
+        "História"
+      ],
       "respostaCorreta": 2,
       "tema": "Cursos",
       "explicacao": "Engenharia Civil é um curso da área de Exatas/Tecnológicas, enquanto os outros são da área de Humanas."
     },
     {
       "enunciado": "Qual é o órgão responsável pelo ENEM no Brasil?",
-      "alternativas": ["MEC", "INEP", "CAPES", "CNE"],
+      "alternativas": [
+        "MEC",
+        "INEP",
+        "CAPES",
+        "CNE"
+      ],
       "respostaCorreta": 1,
       "tema": "Provas",
       "explicacao": "O INEP (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira) é o órgão responsável pela aplicação do ENEM."
     },
     {
       "enunciado": "Qual destes cursos geralmente tem a maior nota de corte no SISU?",
-      "alternativas": ["Medicina", "Direito", "Engenharia Civil", "Administração"],
+      "alternativas": [
+        "Medicina",
+        "Direito",
+        "Engenharia Civil",
+        "Administração"
+      ],
       "respostaCorreta": 0,
       "tema": "Cursos",
       "explicacao": "Medicina tradicionalmente tem as notas de corte mais altas no SISU devido à grande concorrência."
     },
     {
       "enunciado": "Quantas competências são avaliadas na redação do ENEM?",
-      "alternativas": ["3", "4", "5", "6"],
+      "alternativas": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
       "respostaCorreta": 2,
       "tema": "Provas",
       "explicacao": "A redação do ENEM é avaliada em 5 competências, cada uma valendo até 200 pontos."
     },
     {
       "enunciado": "Qual é o tempo mínimo de duração de um curso de tecnólogo?",
-      "alternativas": ["1 ano", "2 anos", "3 anos", "4 anos"],
+      "alternativas": [
+        "1 ano",
+        "2 anos",
+        "3 anos",
+        "4 anos"
+      ],
       "respostaCorreta": 1,
       "tema": "Cursos",
       "explicacao": "Os cursos superiores de tecnologia (tecnólogos) têm duração mínima de 2 anos."
@@ -138,7 +244,12 @@
     },
     {
       "enunciado": "Qual destes é um vestibular tradicional de universidade pública?",
-      "alternativas": ["ENEM", "FUVEST", "PROUNI", "SISU"],
+      "alternativas": [
+        "ENEM",
+        "FUVEST",
+        "PROUNI",
+        "SISU"
+      ],
       "respostaCorreta": 1,
       "tema": "Provas",
       "explicacao": "A FUVEST é o vestibular da Universidade de São Paulo (USP), um dos mais tradicionais do país."
@@ -157,23 +268,74 @@
     },
     {
       "enunciado": "Qual destes itens é proibido levar para a prova do ENEM?",
-      "alternativas": ["Caneta esferográfica preta", "Lápis", "Borracha", "Relógio"],
+      "alternativas": [
+        "Caneta esferográfica preta",
+        "Lápis",
+        "Borracha",
+        "Relógio"
+      ],
       "respostaCorreta": 3,
       "tema": "Provas",
       "explicacao": "Relógios são proibidos na prova do ENEM para evitar possíveis fraudes com dispositivos eletrônicos."
+    },
+    {
+      "enunciado": "Qual o nome do processo de transformação de energia luminosa em química pelas plantas?",
+      "alternativas": [
+        "Respiração",
+        "Fotossíntese",
+        "Transpiração",
+        "Quimiossíntese"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Biologia",
+      "explicacao": "A fotossíntese é o processo pelo qual as plantas, algas e algumas bactérias utilizam a energia da luz solar para converter dióxido de carbono e água em glicose e oxigênio."
+    },
+    {
+      "enunciado": "Qual o principal componente do ar que respiramos?",
+      "alternativas": [
+        "Oxigênio",
+        "Dióxido de Carbono",
+        "Nitrogênio",
+        "Argônio"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Química",
+      "explicacao": "O nitrogênio compõe cerca de 78% da atmosfera terrestre, sendo o gás mais abundante no ar que respiramos."
+    },
+    {
+      "enunciado": "Quem foi o primeiro presidente do Brasil?",
+      "alternativas": [
+        "Dom Pedro II",
+        "Marechal Deodoro da Fonseca",
+        "Getúlio Vargas",
+        "Prudente de Morais"
+      ],
+      "respostaCorreta": 1,
+      "tema": "História",
+      "explicacao": "Marechal Deodoro da Fonseca foi o primeiro presidente do Brasil, assumindo o cargo após a Proclamação da República em 1889."
     }
   ],
   "dificil": [
     {
       "enunciado": "Qual curso universitário tem a prova específica chamada 'FUVEST'?",
-      "alternativas": ["Medicina na UFMG", "Direito na USP", "Engenharia na UNICAMP", "Medicina na USP"],
+      "alternativas": [
+        "Medicina na UFMG",
+        "Direito na USP",
+        "Engenharia na UNICAMP",
+        "Medicina na USP"
+      ],
       "respostaCorreta": 3,
       "tema": "Cursos",
       "explicacao": "A FUVEST é o vestibular da Universidade de São Paulo (USP), e Medicina é um dos cursos mais concorridos."
     },
     {
       "enunciado": "Qual universidade brasileira foi considerada a melhor da América Latina em 2023?",
-      "alternativas": ["USP", "UNICAMP", "UFMG", "UFRJ"],
+      "alternativas": [
+        "USP",
+        "UNICAMP",
+        "UFMG",
+        "UFRJ"
+      ],
       "respostaCorreta": 0,
       "tema": "Universidades",
       "explicacao": "A Universidade de São Paulo (USP) foi classificada como a melhor da América Latina em rankings internacionais recentes."
@@ -204,21 +366,36 @@
     },
     {
       "enunciado": "Qual foi a nota média nacional na redação do ENEM em 2022?",
-      "alternativas": ["587,4", "623,4", "654,2", "701,5"],
+      "alternativas": [
+        "587,4",
+        "623,4",
+        "654,2",
+        "701,5"
+      ],
       "respostaCorreta": 0,
       "tema": "Provas",
       "explicacao": "Em 2022, a média nacional na redação do ENEM foi de 587,4 pontos, segundo dados do INEP."
     },
     {
       "enunciado": "Quantas universidades brasileiras estão entre as 1000 melhores do mundo no ranking THE 2023?",
-      "alternativas": ["5", "7", "10", "15"],
+      "alternativas": [
+        "5",
+        "7",
+        "10",
+        "15"
+      ],
       "respostaCorreta": 1,
       "tema": "Universidades",
       "explicacao": "Em 2023, sete universidades brasileiras apareceram no ranking das 1000 melhores do mundo segundo o Times Higher Education."
     },
     {
       "enunciado": "Qual destes cursos tem a maior carga horária mínima exigida pelo MEC?",
-      "alternativas": ["Medicina", "Direito", "Engenharia Civil", "Arquitetura e Urbanismo"],
+      "alternativas": [
+        "Medicina",
+        "Direito",
+        "Engenharia Civil",
+        "Arquitetura e Urbanismo"
+      ],
       "respostaCorreta": 0,
       "tema": "Cursos",
       "explicacao": "Medicina tem a maior carga horária, com mínimo de 7.200 horas, enquanto os outros cursos têm entre 3.000 e 4.000 horas."
@@ -237,17 +414,209 @@
     },
     {
       "enunciado": "Qual destas universidades foi a primeira a ser criada no Brasil?",
-      "alternativas": ["USP", "UFMG", "UFRJ", "UFBA"],
+      "alternativas": [
+        "USP",
+        "UFMG",
+        "UFRJ",
+        "UFBA"
+      ],
       "respostaCorreta": 2,
       "tema": "Universidades",
       "explicacao": "A Universidade Federal do Rio de Janeiro (UFRJ) tem suas origens em 1792 com a criação da Academia Real Militar, sendo considerada a mais antiga."
     },
     {
       "enunciado": "Qual porcentagem aproximada de estudantes que concluem o ensino superior no Brasil?",
-      "alternativas": ["8%", "18%", "28%", "38%"],
+      "alternativas": [
+        "8%",
+        "18%",
+        "28%",
+        "38%"
+      ],
       "respostaCorreta": 1,
       "tema": "Estatísticas",
       "explicacao": "Segundo dados recentes, cerca de 18% dos brasileiros entre 25 e 34 anos têm ensino superior completo."
+    },
+    {
+      "enunciado": "Qual o nome da teoria que explica a origem do universo a partir de uma grande explosão?",
+      "alternativas": [
+        "Teoria da Relatividade",
+        "Teoria do Big Bang",
+        "Teoria da Evolução",
+        "Teoria das Cordas"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Física",
+      "explicacao": "A Teoria do Big Bang é o modelo cosmológico dominante que descreve o desenvolvimento inicial do universo."
+    },
+    {
+      "enunciado": "Qual o nome do processo de formação de rochas sedimentares?",
+      "alternativas": [
+        "Vulcanismo",
+        "Metamorfismo",
+        "Sedimentação",
+        "Erosão"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Geologia",
+      "explicacao": "A sedimentação é o processo de deposição de partículas que, ao longo do tempo, formam rochas sedimentares."
+    },
+    {
+      "enunciado": "Qual o nome do tratado que encerrou a Primeira Guerra Mundial?",
+      "alternativas": [
+        "Tratado de Versalhes",
+        "Tratado de Tordesilhas",
+        "Tratado de Paris",
+        "Tratado de Potsdam"
+      ],
+      "respostaCorreta": 0,
+      "tema": "História",
+      "explicacao": "O Tratado de Versalhes foi assinado em 1919 e formalmente encerrou a Primeira Guerra Mundial."
+    }
+  ],
+  "muito_dificil": [
+    {
+      "enunciado": "Qual o nome do tratado que, em 1494, dividiu o mundo a ser descoberto entre Portugal e Espanha, e qual a linha imaginária que o definia?",
+      "alternativas": [
+        "Tratado de Tordesilhas, Meridiano de Tordesilhas",
+        "Tratado de Madri, Linha do Equador",
+        "Tratado de Utrecht, Trópico de Capricórnio",
+        "Tratado de Badajoz, Meridiano de Greenwich"
+      ],
+      "respostaCorreta": 0,
+      "tema": "História",
+      "explicacao": "O Tratado de Tordesilhas, assinado em 1494, estabeleceu um meridiano a 370 léguas a oeste de Cabo Verde, dividindo as terras a serem descobertas entre Portugal (a leste) e Espanha (a oeste)."
+    },
+    {
+      "enunciado": "Qual o nome da lei física que descreve a relação entre a força, a massa e a aceleração de um objeto?",
+      "alternativas": [
+        "Lei da Gravitação Universal",
+        "Primeira Lei de Newton",
+        "Segunda Lei de Newton",
+        "Terceira Lei de Newton"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Física",
+      "explicacao": "A Segunda Lei de Newton (F=ma) estabelece que a força resultante sobre um corpo é diretamente proporcional ao produto de sua massa pela aceleração que ele adquire."
+    },
+    {
+      "enunciado": "Qual o nome do processo de divisão celular que resulta na formação de gametas?",
+      "alternativas": [
+        "Mitose",
+        "Meiose",
+        "Cariocinese",
+        "Citocinese"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Biologia",
+      "explicacao": "A meiose é um tipo de divisão celular que produz quatro células-filhas com metade do número de cromossomos da célula-mãe, essencial para a formação de gametas."
+    },
+    {
+      "enunciado": "Qual o nome do fenômeno em que a luz se curva ao passar de um meio para outro?",
+      "alternativas": [
+        "Reflexão",
+        "Difração",
+        "Refração",
+        "Dispersão"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Física",
+      "explicacao": "A refração é a mudança na direção de propagação da luz (ou de outra onda) ao passar de um meio para outro com índice de refração diferente."
+    },
+    {
+      "enunciado": "Qual o nome do processo químico que ocorre em usinas nucleares para gerar energia?",
+      "alternativas": [
+        "Fusão Nuclear",
+        "Fissão Nuclear",
+        "Combustão",
+        "Eletrólise"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Química",
+      "explicacao": "A fissão nuclear é o processo de quebra de núcleos atômicos pesados, liberando uma grande quantidade de energia, utilizado em usinas nucleares."
+    },
+    {
+      "enunciado": "Qual o nome do principal hormônio responsável pela regulação do açúcar no sangue?",
+      "alternativas": [
+        "Adrenalina",
+        "Insulina",
+        "Glucagon",
+        "Tiroxina"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Biologia",
+      "explicacao": "A insulina, produzida pelo pâncreas, é o hormônio que permite que as células do corpo absorvam glicose do sangue, diminuindo os níveis de açúcar."
+    },
+    {
+      "enunciado": "Qual o nome do cientista que formulou a teoria da relatividade?",
+      "alternativas": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Galileu Galilei",
+        "Stephen Hawking"
+      ],
+      "respostaCorreta": 1,
+      "tema": "Física",
+      "explicacao": "Albert Einstein é o físico mais conhecido por desenvolver a teoria da relatividade, um dos dois pilares da física moderna."
+    },
+    {
+      "enunciado": "Qual o nome do processo de formação de novas espécies a partir de uma espécie ancestral?",
+      "alternativas": [
+        "Mutação",
+        "Seleção Natural",
+        "Evolução",
+        "Especiação"
+      ],
+      "respostaCorreta": 3,
+      "tema": "Biologia",
+      "explicacao": "A especiação é o processo evolutivo pelo qual novas espécies biológicas surgem a partir de espécies preexistentes."
+    },
+    {
+      "enunciado": "Qual o nome do elemento químico com o menor número atômico?",
+      "alternativas": [
+        "Hélio",
+        "Lítio",
+        "Hidrogênio",
+        "Carbono"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Química",
+      "explicacao": "O hidrogênio (H) possui número atômico 1, sendo o elemento mais leve e abundante do universo."
+    },
+    {
+      "enunciado": "Qual o nome da estrutura cerebral responsável pela memória e pelo aprendizado?",
+      "alternativas": [
+        "Cerebelo",
+        "Tronco Encefálico",
+        "Hipocampo",
+        "Córtex Cerebral"
+      ],
+      "respostaCorreta": 2,
+      "tema": "Biologia",
+      "explicacao": "O hipocampo é uma região do cérebro fundamental para a formação de novas memórias e para o aprendizado espacial."
+    },
+    {
+      "enunciado": "Qual o nome da teoria que descreve a deriva dos continentes?",
+      "alternativas": [
+        "Tectônica de Placas",
+        "Vulcanismo",
+        "Sismologia",
+        "Geomorfologia"
+      ],
+      "respostaCorreta": 0,
+      "tema": "Geografia",
+      "explicacao": "A teoria da Tectônica de Placas explica o movimento das grandes placas litosféricas que compõem a superfície terrestre, resultando na deriva dos continentes."
+    },
+    {
+      "enunciado": "Qual o nome do gás responsável pelo efeito estufa mais significativo na atmosfera terrestre?",
+      "alternativas": [
+        "Metano",
+        "Dióxido de Carbono",
+        "Óxido Nitroso",
+        "Vapor d'água"
+      ],
+      "respostaCorreta": 3,
+      "tema": "Química",
+      "explicacao": "Embora o dióxido de carbono seja frequentemente citado, o vapor d'água é o gás de efeito estufa mais abundante e com maior contribuição para o efeito estufa natural da Terra."
     }
   ]
 }

@@ -12,7 +12,15 @@ import {
   Settings,
   Sun,
   Moon,
-  Palette
+  Palette,
+  Home,
+  Gamepad2,
+  Book,
+  Award,
+  Swords,
+  Trophy,
+  BookOpen,
+  BarChart3
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -107,39 +115,37 @@ export function SmartNavigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {NAVIGATION_ITEMS.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="group relative flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                <span className="text-sm font-medium">{item.label}</span>
-                {item.badge && (
-                  <Badge className="bg-blue-500 text-white text-xs px-2 py-1 animate-pulse">
-                    {item.badge}
-                  </Badge>
-                )}
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300" />
-              </Link>
-            ))}
-            
-            {/* Ranking Link */}
-            <Link
-              href="/ranking"
-              className="group relative flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              <span className="text-sm font-medium">Ranking</span>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:w-full transition-all duration-300" />
-            </Link>
-            
-            {/* Battle Link */}
-            <Link
-              href="/battle"
-              className="group relative flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              <span className="text-sm font-medium">Batalhas</span>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-500 to-pink-500 group-hover:w-full transition-all duration-300" />
-            </Link>
+            {NAVIGATION_ITEMS.map((item) => {
+              const Icon = {
+                Home,
+                Gamepad2,
+                Book,
+                Award,
+                Swords,
+                User,
+                Trophy,
+                BookOpen,
+                BarChart3,
+                Settings
+              }[item.icon as keyof typeof import('lucide-react')];
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group relative flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  {Icon && <Icon className="w-4 h-4" />}
+                  <span className="text-sm font-medium">{item.label}</span>
+                  {item.badge && (
+                    <Badge className="bg-blue-500 text-white text-xs px-2 py-1 animate-pulse">
+                      {item.badge}
+                    </Badge>
+                  )}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300" />
+                </Link>
+              );
+            })}
           </div>
 
           {/* Right Side */}
@@ -300,36 +306,36 @@ export function SmartNavigation() {
               className="md:hidden border-t border-gray-700/50"
             >
               <div className="px-2 pt-2 pb-3 space-y-1">
-                {NAVIGATION_ITEMS.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200"
-                  >
-                    {item.label}
-                    {item.badge && (
-                      <Badge className="ml-2 bg-blue-500 text-white text-xs">
-                        {item.badge}
-                      </Badge>
-                    )}
-                  </Link>
-                ))}
-                
-                {/* Ranking Link Mobile */}
-                <Link
-                  href="/ranking"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200"
-                >
-                  Ranking
-                </Link>
-                
-                {/* Battle Link Mobile */}
-                <Link
-                  href="/battle"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200"
-                >
-                  Batalhas
-                </Link>
+                {NAVIGATION_ITEMS.map((item) => {
+                  const Icon = {
+                    Home,
+                    Gamepad2,
+                    Book,
+                    Award,
+                    Swords,
+                    User,
+                    Trophy,
+                    BookOpen,
+                    BarChart3,
+                    Settings
+                  }[item.icon as keyof typeof import("lucide-react")];
+
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200"
+                    >
+                      {Icon && <Icon className="w-5 h-5" />}
+                      <span>{item.label}</span>
+                      {item.badge && (
+                        <Badge className="ml-2 bg-blue-500 text-white text-xs">
+                          {item.badge}
+                        </Badge>
+                      )}
+                    </Link>
+                  );
+                })}
               </div>
 
               {/* Mobile Search */}

@@ -163,6 +163,27 @@ export const NAVIGATION_ITEMS = [
     badge: "Novo"
   },
   {
+    label: "Modo Estudos",
+    href: "/modo-estudos",
+    icon: "Book",
+    description: "Estude com configurações personalizadas",
+    badge: "Beta"
+  },
+  {
+    label: "Ranking",
+    href: "/ranking",
+    icon: "Award",
+    description: "Veja sua posição no ranking global",
+    badge: undefined
+  },
+  {
+    label: "Batalhas",
+    href: "/battle",
+    icon: "Swords",
+    description: "Desafie amigos em batalhas de conhecimento",
+    badge: "Em Breve"
+  },
+  {
     label: "Perfil",
     href: "/profile",
     icon: "User",
