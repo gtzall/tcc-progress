@@ -98,23 +98,53 @@ export function SmartNavigation() {
     <nav className="bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
+          {/* Logo e Stats do Usuário */}
+          <div className="flex items-center space-x-6">
             <Link href="/" className="flex items-center space-x-2">
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center"
+                className="w-10 h-10 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg"
               >
-                <span className="text-white font-bold text-lg">Q</span>
+                <span className="text-white font-bold text-xl">Q</span>
               </motion.div>
-              <span className="text-xl font-bold text-white hidden sm:block">
-                {APP_CONFIG.name}
-              </span>
+              <div className="hidden sm:block">
+                <span className="text-xl font-bold text-white">
+                  {APP_CONFIG.name}
+                </span>
+                <p className="text-xs text-gray-400 -mt-1">Plataforma Educacional</p>
+              </div>
             </Link>
+
+            {/* User Quick Stats */}
+            <div className="hidden lg:flex items-center space-x-4 ml-6 pl-6 border-l border-gray-700/50">
+              <motion.div 
+                className="flex items-center space-x-2 bg-gray-800/30 rounded-full px-3 py-1.5"
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-sm text-gray-300">Nível 15</span>
+              </motion.div>
+              
+              <motion.div 
+                className="flex items-center space-x-2 bg-gray-800/30 rounded-full px-3 py-1.5"
+                whileHover={{ scale: 1.05 }}
+              >
+                <Trophy className="w-3 h-3 text-yellow-400" />
+                <span className="text-sm text-gray-300">1,250 XP</span>
+              </motion.div>
+              
+              <motion.div 
+                className="flex items-center space-x-2 bg-gray-800/30 rounded-full px-3 py-1.5"
+                whileHover={{ scale: 1.05 }}
+              >
+                <Award className="w-3 h-3 text-purple-400" />
+                <span className="text-sm text-gray-300">12 Conquistas</span>
+              </motion.div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {NAVIGATION_ITEMS.map((item) => {
               const Icon = {
                 Home,
@@ -130,20 +160,25 @@ export function SmartNavigation() {
               }[item.icon as keyof typeof import('lucide-react')];
 
               return (
-                <Link
+                <motion.div
                   key={item.href}
-                  href={item.href}
-                  className="group relative flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  {Icon && <Icon className="w-4 h-4" />}
-                  <span className="text-sm font-medium">{item.label}</span>
-                  {item.badge && (
-                    <Badge className="bg-blue-500 text-white text-xs px-2 py-1 animate-pulse">
-                      {item.badge}
-                    </Badge>
-                  )}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300" />
-                </Link>
+                  <Link
+                    href={item.href}
+                    className="group relative flex items-center space-x-2 px-3 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200"
+                  >
+                    {Icon && <Icon className="w-4 h-4" />}
+                    <span className="text-sm font-medium">{item.label}</span>
+                    {item.badge && (
+                      <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-2 py-1 animate-pulse shadow-lg">
+                        {item.badge}
+                      </Badge>
+                    )}
+                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full group-hover:w-full transition-all duration-300" />
+                  </Link>
+                </motion.div>
               );
             })}
           </div>
