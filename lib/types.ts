@@ -376,6 +376,15 @@ export interface ValidationResult {
   errors: ValidationError[]
 }
 
+// Tipos de análise de desempenho
+export interface UserPerformanceData {
+  questionId: string;
+  topic: string; // Tópico ou matéria da questão (ex: 'Matemática - Geometria')
+  isCorrect: boolean;
+  timeSpent: number; // Tempo gasto na resposta (em segundos)
+  timestamp: Date;
+}
+
 // Tipos de cache
 export interface CacheEntry<T> {
   key: string
